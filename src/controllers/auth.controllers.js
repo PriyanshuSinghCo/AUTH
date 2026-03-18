@@ -15,7 +15,7 @@ export async function register(req, res) {
     })
 
     if(isAlreadyRegistered) {
-        res.status(409).json({message: "Username or email already exist"})
+       return res.status(409).json({message: "Username or email already exist"})
     }
 
     const hashedPassword = crypto.createHash("sha256").update(password).digest("hex");
