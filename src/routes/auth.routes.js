@@ -9,8 +9,15 @@ const authRouter = Router();
  * Register a new user
  * 
  */
-
 authRouter.post("/register", authController.register);
+
+/**
+ * GET /api/auth/get-me
+ * 
+ */
+
+authRouter.get("/get-me", authController.getMe)
+
 
 
 
